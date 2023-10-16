@@ -5,7 +5,7 @@
         <field name="name">fatturapa.attachment.in.form</field>
         <field name="model">fatturapa.attachment.in</field>
         <field name="arch" type="xml">
-            <form string="Import e-bill" duplicate="false">
+            <form>
                 <field name="inconsistencies" invisible="1" />
                 <div
                     class="alert alert-info"
