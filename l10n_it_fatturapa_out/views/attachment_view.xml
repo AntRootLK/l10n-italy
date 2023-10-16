@@ -50,7 +50,7 @@
             <field name="name">fatturapa.attachment.out.form</field>
             <field name="model">fatturapa.attachment.out</field>
             <field name="arch" type="xml">
-                <form string="Export Electronic Invoice" create="false">
+                <form>
                     <header>
                         <field name="state" widget="statusbar" />
                     </header>
