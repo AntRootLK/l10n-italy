@@ -20,12 +20,12 @@ def migrate(env, version):
         (table_name, "%s" % constraint_name),
     )
 
-    if env.cr.fetchall():
-        if env.cr.fetchall()[0]:
-            alter_table_sql = sql.SQL("ALTER TABLE {} DROP CONSTRAINT {}").format(
-                sql.Identifier(table_name), sql.Identifier(constraint_name)
-            )
-            drop_line_sql = "DELETE FROM ir_model_constraint WHERE NAME = %s"
+    # if env.cr.fetchall():
+    #     if env.cr.fetchall()[0]:
+    #         alter_table_sql = sql.SQL("ALTER TABLE {} DROP CONSTRAINT {}").format(
+    #             sql.Identifier(table_name), sql.Identifier(constraint_name)
+    #         )
+    #         drop_line_sql = "DELETE FROM ir_model_constraint WHERE NAME = %s"
     
-            openupgrade.logged_query(env.cr, alter_table_sql)
-            openupgrade.logged_query(env.cr, drop_line_sql, [constraint_name])
+    #         openupgrade.logged_query(env.cr, alter_table_sql)
+    #         openupgrade.logged_query(env.cr, drop_line_sql, [constraint_name])
